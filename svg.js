@@ -14,8 +14,12 @@ var switchC = function(){
     console.log("running ...");
     var country_name = document.getElementsByTagName("h2")[0];
     if (country == 0){
-	country_name.innerHTML = "Austria";
+	country_name.innerHTML = "Austria Medals";
 	country = 1;
+    }
+    else {
+	country_name.innerHTML = "Norway Medals";
+	country = 0;
     }
     
 }
@@ -37,17 +41,21 @@ var circleRadius = function(place){
 }
 
 var start = function() {
+    if (country == 1){
     drawCircle(100, 250, 0, '#802e08');
     drawCircle(300, 250, 0, '#abb0b5');
     drawCircle(500, 250, 0, '#ffe11e');
-
+    circleRadius(austria);
+    }
+    else{
+    drawCircle(100, 250, 0, '#802e08');
+    drawCircle(300, 250, 0, '#abb0b5');
+    drawCircle(500, 250, 0, '#ffe11e');
     circleRadius(norway);
+    }
+
 }
 
-    var stats = function(){ 
-	
-
-    }
 
 
 start();
