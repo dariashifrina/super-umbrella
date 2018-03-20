@@ -15,10 +15,12 @@ var switchC = function(){
     var country_name = document.getElementsByTagName("h2")[0];
     if (country == 0){
 	country_name.innerHTML = "Austria Medals";
+	start();
 	country = 1;
     }
     else {
 	country_name.innerHTML = "Norway Medals";
+	start();
 	country = 0;
     }
     
@@ -58,4 +60,4 @@ var start = function() {
 
 
 
-start();
+
